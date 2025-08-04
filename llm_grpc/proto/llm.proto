@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package llm;
+
+service LlmService {
+    rpc Models(Empty) returns (Strings);
+    rpc Query(LlmQuery) returns (Strings);
+}
+
+message Empty {}
+
+message Strings {
+    repeated string values = 1;
+}
+
+message LlmQuery {
+    string model = 1;
+    string prompt = 2;
+}
