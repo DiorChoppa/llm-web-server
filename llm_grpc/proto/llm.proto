@@ -10,7 +10,7 @@ service LlmService {
 message Empty {}
 
 message Strings {
-    repeated string values = 1;
+    repeated string result = 1;
 }
 
 message LlmQuery {
